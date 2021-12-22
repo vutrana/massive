@@ -1,0 +1,48 @@
+.showcase {
+  padding: $pd-5 0;
+  #showcaseTab {
+    border: none;
+      .nav-item {
+        .nav-link {
+          border: none;
+          margin: 0 $mg-2 - 5;
+          letter-spacing: $letter-spacing-0 - 2;
+          text-transform: uppercase;
+          color: $color-grey-5;
+          font-size: $fs-0 + 1;
+          &.active {
+            color: $color-black-2;
+          }
+          &:hover {
+            color: $color-black-2;
+          }
+        }
+      }
+  }
+  #showcaseContent {
+    margin: $mg-3 0;
+    .row {
+      .card {
+        padding: 0;
+      }
+    }
+  }
+  @include responsive("medium") {
+    #showcaseTab {
+      .nav-item {
+        .nav-link {
+          margin: 0 $mg-0 + 5;
+        }
+      }
+    }
+  }
+  @include responsive("small") {
+    #showcaseTab {
+      .nav-item {
+        .nav-link {
+          margin: 0;
+        }
+      }
+    }
+  }
+}

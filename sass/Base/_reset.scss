@@ -1,0 +1,25 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: $fs-1;
+  line-height: $line-height-0;
+  color: $color-black-0;
+  background-color: $color-white-0;
+  font-weight: $fw-0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0 0 $mg-2 + 10 0;
+  color: #333;
+  font-weight: normal;
+  line-height: $line-height-0;
+}
+
+h4 {
+  font-size: $fs-2;
+}

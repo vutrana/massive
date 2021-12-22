@@ -1,0 +1,118 @@
+.skills {
+  background-image: url(../img/bg2.jpg);
+  @extend .backgroundImg;
+  color: $color-white-0;
+  display: flex;
+  align-items: center;
+  padding: $pd-5 0;
+  position: relative;
+  .dark-overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    content: "";
+    background: $color-grey-7;
+    z-index: 1;
+  }
+  .row {
+  align-items: center;
+    .skills__left {
+      padding: 0 $pd-4 + 10;
+      h1 {
+        text-transform: uppercase;
+        letter-spacing: $letter-spacing-0 + 1;
+        font-size: $fs-3;
+        line-height: $line-height-0;
+        color: $color-white-0;
+        text-align: center;
+        margin-bottom: 0;
+      }
+    }
+    .skills__right {
+      position: relative;
+      z-index: 2;
+      padding: 0 $pd-4 + 10;
+      h4 {
+        color: $color-white-0;
+      }
+      p {
+        margin: 0 0 $mg-1 + 5;
+        line-height: $line-height-2 + 5;
+      }
+      .skills__progress{
+        margin-top: $mg-1 + 5;
+        .progress {
+          background-color: $color-grey-2;
+          border-radius: 0;
+          margin-top: $mg-0 + 5;
+          margin-bottom: $mg-3;
+          height: 20px;
+          position: relative;
+          overflow: visible;
+          .progress-bar {
+            background-color: $color-white-0;
+            color: $color-grey-2;
+            text-align: left;
+            padding-left: $pd-0;
+          }
+          span {
+            color: $color-black-2;
+            background-color: $color-grey-3;
+            border-radius: $border-radius-2;
+            min-width: 25px;
+            height: 20px;
+            padding: 0 $pd-0 + 3;
+            text-align: center;
+            letter-spacing: 0;
+            line-height: $line-height-1;
+            position: absolute;
+            top: -150%;
+            &.progress-80 {
+              left: 75%;
+            }
+            &.progress-90 {
+              left: 85%;
+            }
+            &.progress-75 {
+              left: 70%;
+            }
+            &::after {
+              content: "";
+              width: 5px;
+              height: 5px;
+              border: 1px solid white;
+              position: absolute;
+              bottom: -2px;
+              left: 17px;
+              transform: rotate(-45deg);
+              border-left: 1px solid $color-grey-3;
+              border-bottom: 1px solid $color-grey-3;
+              border-right: transparent;
+              border-top: transparent;
+              background-color: $color-grey-3;
+            }
+          }
+        }
+      }
+    }
+  }
+  @include responsive("large") {
+    .dark-overlay {
+      display: none;
+    }
+    .skills__left {
+      height: 400px;
+      width: 85%;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .skills__right {
+      width: 85%;
+      margin: 0 auto;
+    }
+  }
+}

@@ -1,0 +1,86 @@
+.collection {
+  background-image: url(../img/bg4.png);
+  background-repeat: repeat;
+  padding: $pd-5 0;
+  display: flex;
+  justify-content: center;
+  .collection__content {
+    #myCollection {
+      li {
+        button {
+          border-radius: 0;
+          background: $color-grey-10;
+          padding: $pd-4 + 15 $pd-5 - 30;
+          margin-right: $mg-2;
+          position: relative;
+          transition: all 0.3s;
+          border: none;
+          &::after {
+            content: "";
+            width: 20px;
+            height: 20px;
+            position: absolute;
+            bottom: -5px;
+            left: 45%;
+            transform: rotate(45deg);
+            background: $color-white-0;
+            opacity: 0;
+            border-right: transparent;
+            border-top: transparent;
+            transition: all 0.05s;
+          }
+          &.active {
+            border: none;
+            background: $color-white-0;
+            &::after {
+              opacity: 1;
+            }
+          }
+          &:hover {
+            background: $color-white-0;
+            &::after {
+              opacity: 1;
+            }
+          }
+          i {
+            font-size: $fs-4;
+            color: transparent;
+            -webkit-text-stroke-width: 1px;
+            -webkit-text-stroke-color: $color-black-7;
+          }
+        }
+      }
+    }
+    #myCollectionContent {
+      .collection__title {
+        text-transform: uppercase;
+        padding: $pd-4 + 10 0;   
+        h4 {
+          letter-spacing: $letter-spacing-1 + 1;
+          color: $color-grey-0;
+          font-size: $fs-0 + 1;
+          line-height: $line-height-2 + 5;
+          margin-bottom: 0;
+        }
+        h2 {
+          letter-spacing: $letter-spacing-1 + 1;
+        }
+      }
+      p {
+        line-height: $line-height-2 + 5;
+        margin-bottom: 0;
+      }
+    }
+  }
+  @include responsive("small") {
+    #myCollection {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      button {
+        width: 100%;
+        margin-bottom: $mg-0;
+      }
+    }
+  }
+}

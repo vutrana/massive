@@ -1,0 +1,26 @@
+.banner {
+  background-image: url(../img/bg3.jpg);
+  @extend .backgroundImg;
+  height: 80vh;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  h3 {
+    letter-spacing: $letter-spacing-0 - 2;
+    font-size: $fs-1 + 1;
+    color: $color-green-0;
+    text-transform: uppercase;
+    margin-bottom: 0;
+  }
+  h1 {
+    letter-spacing: $letter-spacing-1 + 1;
+    font-size: $fs-4;
+    color: $color-white-0;
+  }
+  @include responsive("medium") {
+    h1 {
+    font-size: 26px;
+  }
+}
+}

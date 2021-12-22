@@ -1,0 +1,25 @@
+.owl-carousel {
+  .owl-dots {
+    text-align: center;
+    margin-top: $mg-0 + 5;
+    button {
+      display: block;
+      width: 12px;
+      height: 12px;
+      margin: 5px 7px;
+      background: $color-grey-12;
+      border-radius: 20px;
+      display: inline-block;
+      &.active {
+        background: $color-grey-13;
+      }
+    }
+  }
+}
+
+.row {
+  [class*="col-"] {
+    padding-right: 30px;
+    padding-left: 30px;
+  }
+}

@@ -1,0 +1,26 @@
+.button--black {
+  text-transform: uppercase;
+  padding: $pd-3 $pd-4 + 10;
+  color: $color-white-0;
+  background: $color-black-2;
+  font-size: $fs-0 + 1;
+  letter-spacing: $letter-spacing-1;
+  border: none;
+  &:hover {
+    background: $color-green-0;
+  }
+}
+
+.button--green {
+  text-transform: uppercase;
+  padding: $pd-3 $pd-4 + 10;
+  color: $color-white-0;
+  background: $color-green-0;
+  font-size: $fs-0 + 1;
+  letter-spacing: $letter-spacing-1;
+  border: none;
+  &:hover {
+    background: $color-white-0;
+    color: $color-black-2;
+  }
+}

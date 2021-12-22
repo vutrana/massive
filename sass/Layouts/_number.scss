@@ -1,0 +1,40 @@
+.number {
+  background-color: $color-black-8;
+  padding: $pd-5 0;
+  color: $color-white-0;
+  .number__item {
+    text-align: center;
+    .number__top {
+      i {
+        padding-right: $pd-1;
+        font-size: $fs-4;
+        color: transparent;
+        -webkit-text-stroke-width: 1px;
+        -webkit-text-stroke-color: $color-white-0;
+        line-height: $line-height-0;
+      }
+      span {
+        font-size: $fs-4;
+        line-height: $line-height-0;
+      }
+    }
+    h3 {
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-top: $mg-0 * 2;
+      color: $color-white-0;
+      font-size: $fs-1;
+      margin-bottom: 0;
+    }
+  }
+  @include responsive("medium") {
+    .number__item {
+      margin-bottom: $mg-0 * 2;
+      .number__top {
+        i, span {
+          font-size: $fs-3 + 2;
+        }
+      }
+    }
+  }
+}

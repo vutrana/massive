@@ -1,0 +1,57 @@
+.cover {
+  background-image: url(../img/bg1.jpg);
+  @extend .backgroundImg;
+  height: 100vh;
+  position: relative;
+  .cover__content {
+    max-width: 500px;
+    position: absolute;
+    top: 50%;
+    left: 40%;
+    transform: translateY(-50%);
+    text-align: center;
+    text-transform: uppercase;
+    h1 {
+      letter-spacing: $letter-spacing-0;
+      font-size: $fs-7;
+      font-weight: $fw-4;
+      color: $color-white-0;
+    }
+    h2 {
+      letter-spacing: $letter-spacing-0 + 1;
+      font-size: $fs-2 + 2;
+      line-height: $line-height-0;
+      color: $color-white-0;
+    }
+  }
+
+  @include responsive("extra-large") {
+    .cover__content {
+      left: 30%;
+    }
+  }
+
+  @include responsive("medium") {
+    .cover__content {
+      left: 20%;
+      h1 {
+        font-size: $fs-4 - 6;
+      }
+      h2 {
+        font-size: $fs-2;
+      }
+    }
+  }
+
+  @include responsive("small") {
+    .cover__content {
+      left: 6%;
+      h1 {
+        font-size: $fs-4 - 6;
+      }
+      h2 {
+        font-size: $fs-2;
+      }
+    }
+  }
+}
